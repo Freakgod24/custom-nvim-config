@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- Windows
 vim.opt.splitbelow = true
+vim.opt.splitright = true
 vim.keymap.set('n', '<leader>h', '<C-w>h', {})
 vim.keymap.set('n', '<leader>l', '<C-w>l', {})
 vim.keymap.set('n', '<leader>j', '<C-w>j', {})
@@ -38,14 +39,3 @@ vim.keymap.set('n', '<leader>v', '<C-w>v', {})
 vim.keymap.set('n', '<tab>', ':bnext<CR>', {})
 vim.keymap.set('n', '<S-tab>', ':bprev<CR>', {})
 vim.keymap.set('n', '<leader>x', ':bd<CR>', {})
-
--- Terminal
-vim.keymap.set('n', '<leader>t', ':split +terminal<CR>', {})
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>:q!<CR>', {})
-vim.api.nvim_create_autocmd('TermOpen', {
-    callback = function()
-        vim.cmd(':set nonu')
-        vim.cmd(':set nornu')
-        vim.cmd(':startinsert')
-    end
-})

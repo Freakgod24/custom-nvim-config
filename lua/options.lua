@@ -39,3 +39,6 @@ vim.keymap.set('n', '<leader>v', '<C-w>v', {})
 vim.keymap.set('n', '<tab>', ':bnext<CR>', {})
 vim.keymap.set('n', '<S-tab>', ':bprev<CR>', {})
 vim.keymap.set('n', '<leader>x', ':bd<CR>', {})
+
+-- Macros
+vim.keymap.set('v', '.', ": norm .<CR>", {})

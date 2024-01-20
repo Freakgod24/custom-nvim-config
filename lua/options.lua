@@ -6,8 +6,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.number = true
 vim.opt.relativenumber = true
-vim.keymap.set('n', '<leader>l', ':set rnu!<CR>', {})
+vim.keymap.set('n', '<leader>rl', ':set rnu!<CR>', {})
 
 -- Motions
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
